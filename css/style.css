@@ -1,0 +1,38 @@
+#skip{
+    position: absolute;
+    left: 500px
+}
+
+#skip:focus{
+    left: 100px
+}
+html{
+    background-color: chocolate;
+    scroll-behavior: smooth
+}
+
+header{
+    text-align: center;
+    padding: 10px 0;
+}
+nav {
+    background-color: #196dc1; 
+    text-align: center; 
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+nav a {
+    color: white; 
+    text-decoration: none; 
+    padding: 12px 18px; 
+    font-size: 16px; 
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+nav a:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
