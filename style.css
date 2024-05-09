@@ -1,0 +1,87 @@
+html{
+    scroll-behavior: smooth;
+}
+#skip{
+    position: relative;
+    left: -500px;
+    text-align: center;
+}
+
+
+
+#skip:focus{
+    left: 100px;
+    transition: 1s
+}
+html{
+    background-color: chocolate;
+    scroll-behavior: smooth
+}
+
+header{
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+nav {
+    background-color: #196dc1; 
+    text-align: center; 
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+nav a {
+    color: white; 
+    text-decoration: none; 
+    padding: 12px 18px; 
+    font-size: 16px; 
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+nav a:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+      		scroll-behavior: auto; /* Disable smooth scrolling */
+    }
+
+    #skip:focus{
+        	transition: 0s !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    nav {
+        background: #6f0606;
+        border: solid 6px #362712;
+       }
+        nav a {
+               color: #fff;
+    }
+}
+.image-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-grid img{
+    width: 80%;
+    border: solid blue 3px;
+    border-bottom-right-radius: 45px;
+}
+@media screen and (min-width: 760px){
+    .image-grid{
+        grid-template-columns:45% 45%;
+        grid-gap: 20px
+    }
+}
+   
+        
+        
+    
+    
+
+
+
