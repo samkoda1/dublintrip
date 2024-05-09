@@ -14,7 +14,7 @@ html{
     transition: 1s
 }
 html{
-    background-color: chocolate;
+    background-color: rgb(30, 159, 210);
     scroll-behavior: smooth
 }
 
@@ -28,7 +28,8 @@ nav {
     text-align: center; 
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    
+  
+
 }
 
 nav a {
@@ -38,6 +39,8 @@ nav a {
     font-size: 16px; 
     font-weight: 500;
     transition: background-color 0.3s ease; 
+    align-items: center;
+   
 }
 nav a:hover {
     background-color: #3498db; 
@@ -54,29 +57,31 @@ nav a:hover {
   }
   @media (prefers-color-scheme: dark) {
     nav {
-        background: #6f0606;
+        background: #61066f;
         border: solid 6px #362712;
        }
         nav a {
                color: #fff;
     }
 }
-.image-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 20px; 
+  }
+  
+  .image-grid img {
+    width: 80%; /* You might consider adjusting this if images look too large or small */
+    border: 3px solid blue;
+   
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+  }
+  
+  .image-grid img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover for a nice effect */
+  }
 
-.image-grid img{
-    width: 80%;
-    border: solid blue 3px;
-    border-bottom-right-radius: 45px;
-}
-@media screen and (min-width: 760px){
-    .image-grid{
-        grid-template-columns:45% 45%;
-        grid-gap: 20px
-    }
-}
    
         
         
