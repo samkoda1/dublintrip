@@ -71,18 +71,17 @@ nav a:hover {
     padding: 20px;
 }
 .image-grid img {
-    width: 100%; /* Ensures the image scales with the column size */
-    border: 5px double #3949ab; /* Double border with a specific color */
-    padding: 5px; /* Creates some space around the image inside the border */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transformation on hover */
+    width: 100%; 
+    border: 5px double #3949ab; 
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease; 
 }
 
 .image-grid img:hover {
-    transform: scale(1.05); /* Slightly enlarges the photo on hover */
+    transform: scale(1.05); 
 }
 
-/* This media query will change the layout to 3 columns when the screen is wider than 600px */
 @media (min-width: 600px) {
     .image-grid {
         grid-template-columns: repeat(3, 1fr);

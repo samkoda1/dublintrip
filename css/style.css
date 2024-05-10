@@ -1,26 +1,35 @@
+html{
+    scroll-behavior: smooth;
+}
 #skip{
-    position: absolute;
-    left: 500px
+    position: relative;
+    left: -500px;
+    text-align: center;
 }
 
+
+
 #skip:focus{
-    left: 100px
+    left: 100px;
+    transition: 1s
 }
 html{
-    background-color: chocolate;
+    background-color: rgb(30, 159, 210);
     scroll-behavior: smooth
 }
 
 header{
     text-align: center;
     padding: 10px 0;
+    font-family: 'Open Sans', sans-serif;
 }
 nav {
     background-color: #196dc1; 
     text-align: center; 
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    
+  
+
 }
 
 nav a {
@@ -30,9 +39,60 @@ nav a {
     font-size: 16px; 
     font-weight: 500;
     transition: background-color 0.3s ease; 
+    align-items: center;
+   
 }
 nav a:hover {
     background-color: #3498db; 
     color: white; 
 }
+@media (prefers-reduced-motion: reduce) {
+    html {
+      		scroll-behavior: auto; /* Disable smooth scrolling */
+    }
+
+    #skip:focus{
+        	transition: 0s !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    nav {
+        background: #61066f;
+        border: solid 6px #362712;
+       }
+        nav a {
+               color: #fff;
+    }
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.image-grid img {
+    width: 100%; 
+    border: 5px double #3949ab; 
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease; 
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); 
+}
+
+@media (min-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+   
+        
+        
+    
+    
+
+
 
