@@ -65,22 +65,29 @@ nav a:hover {
     }
 }
 .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the images horizontally */
-    gap: 20px; 
-  }
-  
-  .image-grid img {
-    width: 80%; /* You might consider adjusting this if images look too large or small */
-    border: 3px solid blue;
-   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.image-grid img {
+    width: 100%; /* Ensures the image scales with the column size */
+    border: 5px double #3949ab; /* Double border with a specific color */
+    padding: 5px; /* Creates some space around the image inside the border */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
     transition: transform 0.3s ease; /* Smooth transformation on hover */
-  }
-  
-  .image-grid img:hover {
-    transform: scale(1.05); /* Slightly enlarges the image on hover for a nice effect */
-  }
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); /* Slightly enlarges the photo on hover */
+}
+
+/* This media query will change the layout to 3 columns when the screen is wider than 600px */
+@media (min-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
    
         
