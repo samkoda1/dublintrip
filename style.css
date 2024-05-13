@@ -14,7 +14,7 @@ html{
     transition: 1s
 }
 html{
-    background-color: rgb(30, 159, 210);
+    background-color: rgb(138, 186, 205);
     scroll-behavior: smooth
 }
 
@@ -87,9 +87,74 @@ nav a:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+.image-glen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    padding: 20px;
+    margin: auto;
+}
 
-   
-        
+.image-glen img {
+    width: 100%; 
+    height: auto; /* Keeps the aspect ratio of the images */
+    border: 4px solid #008000; /* Green border for an Irish-themed look */
+    box-shadow: 0 4px 8px rgba(0,128,0,0.3); /* Optional: Adds a shadow with a green tint for depth */
+}
+
+/* Optional: Enhances image interaction */
+.image-glen img:hover {
+    transform: scale(1.03); /* Slightly enlarges the image on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+.image-glen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 20px; /* Sets space between grid items */
+    padding: 20px; /* Padding around the grid for better spacing from the container edges */
+    margin: auto; /* Center aligns the grid in the section */
+}
+
+.image-glen img {
+    width: 100%; /* Ensures images expand to fill their grid column */
+    height: auto; /* Keeps the aspect ratio of the images */
+    border: 4px solid #008000; /* Green border for an Irish-themed look */
+    box-shadow: 0 4px 8px rgba(0,128,0,0.3); /* Optional: Adds a shadow with a green tint for depth */
+}
+
+/* Optional: Enhances image interaction */
+.image-glen img:hover {
+    transform: scale(1.03); /* Slightly enlarges the image on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+.image-glen img {
+    width: 100%; 
+    height: auto; /* Keeps the aspect ratio of the images */
+    border: 4px solid #008000; /* Green border for an Irish-themed look */
+    box-shadow: 0 4px 8px rgba(0,128,0,0.3); /* Optional: Adds a shadow with a green tint for depth */
+}
+
+.image-kilkenny {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Keeps the two-column layout */
+    gap: 10px; /* Maintains the space between grid items */
+    width: 100vw; /* Sets the grid container to take up the full viewport width */
+    height: 100vh; /* Optionally, set the container to take up the full viewport height */
+    margin: 0; /* Removes margin to use the full screen */
+}
+
+.image-kilkenny img {
+    width: 100%; /* Ensures images expand to fill their grid column */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border: 4px solid #008000; /* Keeps the green border */
+    display: block; /* Ensures there are no inline gaps */
+    object-fit: cover; /* Covers the grid cell fully, might crop some parts of the image */
+}
+
+/* Target the last image to span across two columns */
+.image-kilkenny img:last-child {
+    grid-column: span 2; /* Makes the last image span two columns */
+}
         
     
     
