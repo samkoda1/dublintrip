@@ -14,54 +14,64 @@ html{
     transition: 1s
 }
 html{
-    background-color: rgb(138, 186, 205);
+    background-color: rgb(188, 217, 228);
     scroll-behavior: smooth
 }
-
+section{
+    font-family: 'Verdana', sans-serif;
+}
 header{
     text-align: center;
     padding: 10px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Verdana', sans-serif;
+}
+article{
+    font-family: 'Verdana', sans-serif;
 }
 nav {
-    background-color: #196dc1; 
-    text-align: center; 
+    background-color: #196dc1;
+    text-align: center;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  
-
 }
 
 nav a {
-    color: white; 
-    text-decoration: none; 
-    padding: 12px 18px; 
-    font-size: 16px; 
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease; 
     align-items: center;
+    transition: background-color 0.3s ease; /* Ensures smooth color transition */
+}
+
+/* Style for active link */
+nav a.active {
+    text-decoration: underline; /* Underlines the active link */
    
 }
-nav a:hover {
-    background-color: #3498db; 
-    color: white; 
+
+nav a:hover, nav a.active:hover {
+    background-color: #3498db; /* Ensures hover effect on active link as well */
 }
+
 @media (prefers-reduced-motion: reduce) {
     html {
-      		scroll-behavior: auto; /* Disable smooth scrolling */
+        scroll-behavior: auto;
     }
 
-    #skip:focus{
-        	transition: 0s !important;
+    #skip:focus {
+        transition: 0s !important;
     }
-  }
-  @media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: dark) {
     nav {
-        background: #61066f;
-        border: solid 6px #362712;
-       }
-        nav a {
-               color: #fff;
+        background: #19066f;
+        border: solid 6px #cfccc8;
+    }
+    nav a {
+        color: #fff;
     }
 }
 .image-grid {
@@ -89,7 +99,7 @@ nav a:hover {
 }
 .image-glen {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px; 
     padding: 20px;
     margin: auto;
@@ -114,24 +124,10 @@ nav a:hover {
     padding: 20px; /* Padding around the grid for better spacing from the container edges */
     margin: auto; /* Center aligns the grid in the section */
 }
-
-.image-glen img {
-    width: 100%; /* Ensures images expand to fill their grid column */
-    height: auto; /* Keeps the aspect ratio of the images */
-    border: 4px solid #008000; /* Green border for an Irish-themed look */
-    box-shadow: 0 4px 8px rgba(0,128,0,0.3); /* Optional: Adds a shadow with a green tint for depth */
-}
-
-/* Optional: Enhances image interaction */
-.image-glen img:hover {
-    transform: scale(1.03); /* Slightly enlarges the image on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
-}
-.image-glen img {
-    width: 100%; 
-    height: auto; /* Keeps the aspect ratio of the images */
-    border: 4px solid #008000; /* Green border for an Irish-themed look */
-    box-shadow: 0 4px 8px rgba(0,128,0,0.3); /* Optional: Adds a shadow with a green tint for depth */
+@media (min-width: 768px) {
+    .image-glen {
+        grid-template-columns: repeat(2, 1fr); /* Switches to two columns when viewport is at least 768px wide */
+    }
 }
 
 .image-kilkenny {
