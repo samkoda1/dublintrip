@@ -1,0 +1,32 @@
+.accordion {
+    background-color: #19066f;  
+    color: #fff;              
+    cursor: pointer;            
+    padding: 40px;             
+    width: 100%;                
+    text-align: center;    
+    border: none;              
+    outline: none;              
+    transition: 0.4s;          
+    font-family: 'Verdana', sans-serif; 
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+    margin-bottom: 10px; 
+  }
+  
+  
+  .accordion:hover {
+    background-color: #2e218e; 
+}
+.accordion.active, .accordion:focus {
+    background-color: #241571; /* A different blue for active state */
+}
+@media (prefers-reduced-motion) {
+    .panel{
+        animation: dissolves 4s linear infinite both;
+        background-color: green;
+        text-decoration: overline;
+
+    }
+}

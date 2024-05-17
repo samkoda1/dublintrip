@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Exploring Ireland: A Study Abroad Journey</title>
     <link rel ="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -23,5 +24,29 @@
         <a href="blog.html">Blog</a>
         <a href="gallery.html"class="active">Gallery</a>
     </nav>
+    <button type="button" data-filter="all">All</button>
+<button type="button" data-filter=".category-microsoft">Microsoft</button>
+<button type="button" data-filter=".category-microsoft">Microsoft</button>
+<button type="button" data-filter=".category-microsoft">Microsoft</button>
+    <div class="container">
+        <div class="mix category-microsoft" data-order="1"><img src="images/microsoft1.jpeg" alt="Inside photo of Microsoft building" width = "200"></div>
+        <div class="mix category-microsoft" data-order="2"><img src="images/microsoft2.jpeg" alt="View from top of Microsoft building" width = "200"></div>
+        <div class="mix category-ghjgkj" data-order="3"><img src="images/microsoft3.jpeg" alt="Another photo of the inside of the Microsoft building" width = "200"></div>
+        <div class="mix category-a category-d" data-order="4"></div>
+        <div class="mix category-b category-c" data-order="5"></div>
+        <div class="mix category-a category-d" data-order="6"></div>
+        <div class="mix category-b category-c" data-order="7"></div>
+        <div class="mix category-a category-d" data-order="8"></div>
+        <div class="mix category-b category-c" data-order="9"></div>
+        <div class="mix category-a category-d" data-order="10"></div>
+    </div>
+    
 </header>
 <main id = "main">
+    <script src="mixdist/mixitup.min.js"></script>
+    <script>
+        var containerEl = document.querySelector('.container');
+        var mixer = mixitup(containerEl);
+    </script>
+</body>
+</html>
