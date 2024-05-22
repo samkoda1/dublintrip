@@ -8,7 +8,6 @@ html{
     left: -500px;
     text-align: center;
 }
-  
   /* Style the accordion panel. Note: hidden by default */
   .panel {
     padding: 0 18px;
@@ -158,8 +157,58 @@ nav a:hover, nav a.active:hover {
 .image-kilkenny img:last-child {
     grid-column: span 2; /* Makes the last image span two columns */
 }
-        
-    
+.content-container {
+    display: flex; /* Enable flexbox to align items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the text block and the image */
+    margin-bottom: 20px; /* Margin below the section for spacing */
+}
+
+/* Styling for the text block that contains the blog text */
+.text-block {
+    flex: 3; /* Allows text block to take up more space relative to the image */
+    padding: 0 15px; /* Padding for text for better readability */
+}
+
+
+.image-galway {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid with columns of at least 200px */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+}
+.image-galway img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+}
+.feature-img {
+    width: auto; /* Auto width to maintain aspect ratio */
+    max-width: 250px; /* Increase the maximum width to make the image larger */
+    height: auto; /* Height automatically adjusts to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for aesthetic appeal */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-right: 20px; /* Optional: Adds spacing to the right if text wraps around */
+}
+.image-nommies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    padding: 20px; 
+    justify-content: center; 
+}
+
+.image-nommies img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.image-nommies img:hover {
+    transform: scale(1.05); /* Slightly enlarge images on hover */
+    cursor: pointer; /* Change cursor to indicate interactiveness */
+}
     
 
 
